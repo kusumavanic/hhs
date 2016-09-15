@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<title>Add Catogeory</title>
+	<meta charset="utf-8">  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">  
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 	    <script> 
+		$(function(){
+ 			 $("#header").load("/hhs/newHeader1.html"); 
+ 			 $("#footer").load("/hhs/newFooter.html"); 
+  			 $("#side").load("/hhs/sidenav.html"); 
+  			 $("#submit").click(function(){
+	   				alert("New Catogeory is successfully added..!!!");   				
+	   		 });
+  			 $("#yes1").click(function(){
+   				    alert("From now others can see this catogeory..!!!");   				
+   			 });
+  			 $("#yes2").click(function(){
+   				    alert("From now this catogeory is included in options..!!!");   				
+   			 });
+		});
+		function showDiv() {
+			   document.getElementById('welcomeDiv').style.display = "block";
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="side"></div>
+		<div  style="color:blue;margin-left:300px;width:700px;heiht:500px;background:rgba(132,128,128,0.12)">
+		<form action="/hhs/rest/newCatogeory" method="POST"><h4 >Which Catogeory do u want to add??</h4>
+		
+			<input type="text" id="catogeory" name="catogeory" placeholder="type catogeory">
+			<h4>Add a Icon to your catogeory from browser</h4>
+			<input type="text" id="icon" name="icon" placeholder="choose file" size="40" >
+			<input type="file"/>
+			<h4></h4>
+			<button type="submit" id="submit">Submit</button>
+			<button type="reset" >Reset</button>
+			</form>
+			</div>
+			
+			<div  style="color:blue;margin-left:300px;width:700px;heiht:800px !important;background:rgba(132,128,128,0.12)">
+			<button class="btn btn-primary" value="Show Div" onclick="showDiv()">More Options</button>	
+			<div class="col-md-offset-1" id="welcomeDiv" style="display:none;">
+			<form action="http://localhost:8080/hhs/rest/newCatogeory/get" method="GET">
+			<h4>Do u want to show new catogeory to others</h4>
+			<button class="btn btn-primary" id="yes1">Yes</button>
+			</form>
+			<button class="btn btn-primary">No</button>
+			<form action="http://localhost:8080/hhs/rest/newCatogeory/option" method="GET">
+			<h4>Do u want to include these catogeory in options</h4>
+			<button class="btn btn-primary" id="yes2">Yes</button>
+			</form>			
+			<button class="btn btn-primary">No</button>
+			</div>
+			</div>
+			<div style="background:white;width:700px;height:200px"></div>
+			<div id="footer" style="poistion:ralative"></div>
+	</body>
+</html>

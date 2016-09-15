@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>delete</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+ 	<script>
+ 		$(function(){
+ 			 $("#header").load("newHeader1.html"); 
+ 			$("#newOption").load("newCatogeory4.html");
+ 			$("#side").load("sidenav.html"); 
+ 			$("#delete").click(function(){
+   				alert("you are successfully deleted this catogeory...!!!");   				
+   		});
+ 		});
+ 		function showDiv() {
+			   document.getElementById('welcomeDiv').style.display = "block";
+			}		
+ 	</script>
+ 	<style>
+ 		.btn-success {
+    	color: #fff;
+    	background-color: #1C751C !important;
+    	border-color: #4cae4c;
+	}
+ 	</style>
+</head>
+<body>
+		<div id="header"></div>
+		<div id="side"></div>
+		
+		<div style="background:#F5EEEF; width:826px;height:500px; margin-left:233px;padding:0px">
+		<div class="col-md-3">
+			<button class="btn btn-success" value="Show Div" onclick="showDiv()" style="width:300px;height:50px"> Select Catogeory which you want to delete</button>
+			<form action="rest/login/delete" method="POST">
+			<div id="welcomeDiv" style="display:none;">
+			<div id="newOption"></div>	
+			</div>
+			
+			<button type="submit"class="btn btn-primary" id="delete" style="width:300px;height:50px"> Delete Catogeory</button></form><br>
+			</div>
+</body>
+</html>

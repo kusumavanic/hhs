@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>House Hold Services</title>
+
+        <meta charset="utf-8">  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<meta name="google-signin-client_id" content="518852838024-c2rbvo1r3do97r6ufp1k49an4qndqpah.apps.googleusercontent.com">  
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+ 	      <script src="https://apis.google.com/js/platform.js" async defer></script> 
+		<script>
+  		$(document).ready(function(){
+      		$("#log").click(function(){
+         		 document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:8080/hhs/rest/index";
+     		 });
+  
+ 		 });
+</script>
+ 	<style>
+		div#header {
+			width: 100%;
+			height: 120px;
+			background: #6BAAEA;
+			margin:0;
+			padding:0px;
+		}
+
+		body{
+			margin:0;
+			padding:0;
+		}
+</style>
+</head>
+<body>
+	<div id="header">
+	
+	<a href="/hhs/rest/index"><img src="/hhs/image/logo.jpg" style="height:120px;width:17%; float:left" alt="logo"/></a>
+	<div style="margin-left:160px;float:left;color:white;margin-top:30px"><h1><i>House Hold Services</i></h1></div>		
+  		 <div  style="float:right;margin-top:67px">
+  		 <nav class="navbar" style="background:#050C13;">
+            <div class="container-fluid">
+  		    <ul class="nav navbar-nav">  
+        		 	  <li><a href="/hhs/rest/index">Home<span class="glyphicon glyphicon-home"></span></a></li>		     
+					  <li><a href="/hhs/rest/logout" id="log">LogOut<span class="glyphicon glyphicon-home"></span></a></li>
+			 </ul>
+			 </div>
+	    </nav>
+	     
+        </div>
+       <div class="clearfix"></div>
+	</div>
+	 <script>
+		  
+</script>
+	</body>
+	</html>

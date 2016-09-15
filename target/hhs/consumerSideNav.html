@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Side NavBar</title>
+		<meta charset="utf-8">  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">  
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		 <script> 
+		$(function(){
+  			 $("#newOption").load("/hhs/newCatogeory4.html");  			 
+		});
+		function showDiv() {
+			   document.getElementById('welcomeDiv').style.display = "block";
+			}
+		</script>
+		<style>
+			.navbar-fixed-left {
+		  width: 230px;
+		  position: fixed;
+		  border-radius: 0;
+		  height: 100%;
+		  padding-bottom:45%;
+		}
+		
+		.navbar-fixed-left .navbar-nav > li {
+		  float: none; 
+		  width: 139px;
+		  font-size:120%
+		}
+		
+		.navbar-fixed-left + .container {
+		  padding-left: 200px;
+		}
+		
+		.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+		  margin-top: -50px;
+		  margin-left: 140px;
+		}
+		</style>
+</head>
+<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-left">
+		  <ul class="nav navbar-nav">
+		   
+   				 <li><a href="/hhs/rest/newCatogeory/get/all">viewStatus</a></li>
+     			 <li><a href="/hhs/rest/newCatogeory/get/all">AvailableProviders</a></li>
+     			  <li><a href="/hhs/rest/consumer/composeMail">Send Request Throw Email</a></li>          
+ 			 </ul>
+ 			 	<span style="float:left;margin-left:20px;margin-top:20px">
+					<button class="btn btn-default" value="Show Div" onclick="showDiv()">Send Request</button>
+					<div id="welcomeDiv" style="display:none;">
+					<h3 style="color:white">Select serviceType</h3>
+					<form action="">
+			
+				<div id="newOption"></div>
+			
+				<button class="btn btn-default" type="submit" name="submit">submit</button>
+				</form>
+				</div>
+			</span>
+</div>
+      
+  </ul>
+</div>
+<div class="container">
+ <div class="row">
+	
+ </div>
+</div>
+</body>
+</html>

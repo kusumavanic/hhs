@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Side NavBar</title>
+		<meta charset="utf-8">  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">  
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<style>
+			.navbar-fixed-left {
+		  width: 230px;
+		  position: fixed;
+		  border-radius: 0;
+		  height: 100%;
+		}
+		
+		.navbar-fixed-left .navbar-nav > li {
+		  float: none; 
+		  width: 139px;
+		  font-size:120%
+		}
+		
+		.navbar-fixed-left + .container {
+		  padding-left: 200px;
+		}
+		
+		.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+		  margin-top: -50px;
+		  margin-left: 140px;
+		  background:#050C13;
+		  font-size:100%;
+		  
+		}
+		.navli :hover{
+			    background-color:black !important;
+		        }
+		 .navlik :hover{
+			    background-color:black !important;
+		        }
+		</style>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-left" style="float:left;background:#050C13;">
+  <ul class="nav navbar-nav">
+  
+    <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/requestprovider">viewRequest</a></li>
+      <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/provider">AvailableProviders</a></li>
+      <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/consumer">AvailableConsumers</a></li>
+      <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/service">AvailableServices</a></li>
+      <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/AddNewCatogeory.html">AddNewCatogeory</a></li>
+      
+       <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/adminsee">See Consumer Request</a></li>
+       <li class="navli"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/newCatogeory/get/all/ad">CatogeoryWiseDetails</a></li>
+      
+     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background:#050C13;">Delete<span class="caret"></span></a>
+     <ul class="dropdown-menu dropdown-menu-right" role="menu" style="background:#050C13;">
+     	  <li class="navlik" ><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/selectProvider">Delete Provider</a></li>
+  		  <li class="navlik"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/rest/login/selectConsumer">Delete Consumer</a></li>
+   		  <li class="navlik"><a style="color:white;font-family:calibri;font-size:100%" href="/hhs/delete.html">Delete Catogoery</a></li>
+     </ul>
+   </li> 
+  </ul>
+</div>
+<div class="container">
+ <div class="row">
+	
+ </div>
+</div>
+</body>
+</html>
